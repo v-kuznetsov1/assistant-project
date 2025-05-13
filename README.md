@@ -19,3 +19,15 @@
 14. Хэш - идентификатор коммита
 15. Исследуем лог
 16. HEAD - всему голова
+---
+### Статусы файлов git
+---
+
+```mermaid
+graph LR;
+untracked -- "git add" --> staged (в списке на коммит) + tracked;
+staged -- ""git commit" --> tracked (отслеживаемый);
+tracked -- "Изменения" --> modified (изменённый);
+modified -- "git add" --> staged;
+```
+ 
